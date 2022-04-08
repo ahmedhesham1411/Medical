@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/rounded_blue_2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_corner_radius="@dimen/_10sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/image"
+            android:layout_gravity="center_horizontal"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/name"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/dental"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:background="@drawable/asasas"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/doctorsnum"
+                android:textSize="@dimen/_8sdp"
+                android:maxLines="1"
+                android:textColor="@color/white"/>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/doctors"
+                android:maxLines="1"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/white"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:background="@drawable/start_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.StartActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:orientation="vertical">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rounded_blue_2"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/login"/>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rounded_blue_2"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/sign_up"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:text="@string/terms"
+                android:textColor="@color/hint"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</layout>

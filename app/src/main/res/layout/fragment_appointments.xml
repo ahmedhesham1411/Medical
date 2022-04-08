@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="verificationVM"
+            type="com.gharbia.medical.viewModel.AppointmentsFragmentViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.AppointmentsActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal"
+            android:background="@color/blue">
+
+            <FrameLayout
+                android:visibility="gone"
+                android:onClick="@{()->verificationVM.back()}"
+                android:id="@+id/back_frame"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                tools:ignore="ObsoleteLayoutParam,UselessParent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24_white" />
+
+            </FrameLayout>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/appointments"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_below="@+id/title"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:id="@+id/ssss"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:onClick="@{()->verificationVM.orderTabClick(1)}"
+                android:background="@{verificationVM.aaaaa?  @drawable/rounded_blue_4 : @drawable/rounded_dark_grey2}"
+                >
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:textColor="@{verificationVM.aaaaa?  @color/white : @color/blue}"
+                    android:id="@+id/new_orders"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/current_appointments"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{()->verificationVM.orderTabClick(1)}"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:onClick="@{()->verificationVM.orderTabClick(2)}"
+                android:background="@{verificationVM.bbbbbb?  @drawable/rounded_blue_4 : @drawable/rounded_dark_grey2}"
+                >
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:textColor="@{verificationVM.bbbbbb?  @color/white : @color/blue}"
+                    android:id="@+id/past"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/previous_appointments"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{()->verificationVM.orderTabClick(2)}"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <FrameLayout
+            android:id="@+id/container1"
+            android:layout_below="@+id/ssss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

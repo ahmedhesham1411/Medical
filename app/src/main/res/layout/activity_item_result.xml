@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="verificationVM"
+            type="com.gharbia.medical.viewModel.ItemResultViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.ItemResultActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal"
+            android:background="@color/blue">
+
+            <FrameLayout
+                android:onClick="@{()->verificationVM.back()}"
+                android:id="@+id/back_frame"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                tools:ignore="ObsoleteLayoutParam,UselessParent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24_white" />
+
+            </FrameLayout>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/full_name"
+                android:maxLines="1"
+                android:textSize="@dimen/_14sdp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_15sdp"
+                tools:ignore="ObsoleteLayoutParam,UselessParent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/whatsapp"
+                    android:id="@+id/whats_app"
+                    android:onClick="@{()->verificationVM.whatsapp()}"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="@dimen/_40sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_165sdp"
+                        app:sliderAnimationDuration="1500"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="1500"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="@android:color/transparent"
+                        app:sliderIndicatorUnselectedColor="@android:color/transparent"
+                        app:sliderScrollTimeInSec="3"
+                        app:sliderStartAutoCycle="true" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:id="@+id/img"
+                            android:onClick="@{()->verificationVM.aaa()}"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="@dimen/_15sdp">
+
+                            <com.gharbia.medical.MyTextViewCairo
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:id="@+id/name"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold"/>
+
+                            <com.gharbia.medical.MyTextViewCairo
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:maxLines="3"
+                                android:id="@+id/disc"
+                                android:textColor="@color/hint"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="@dimen/_5sdp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <RatingBar
+                        android:layout_alignParentEnd="true"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:theme="@style/RatingBar"
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:rating="3"
+                        android:isIndicator="true"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:layout_centerVertical="true"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->verificationVM.call2()}"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/phone"
+                            android:layout_gravity="center"/>
+
+                        <com.gharbia.medical.MyTextViewCairo
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="viewStart"
+                            android:id="@+id/clinic_phone"
+                            android:textColor="@color/hint"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="@dimen/_10sdp"/>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:onClick="@{()->verificationVM.call()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/phone"
+                            android:layout_gravity="center"/>
+
+                        <com.gharbia.medical.MyTextViewCairo
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="viewStart"
+                            android:id="@+id/doctor_phone"
+                            android:textColor="@color/hint"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="@dimen/_10sdp"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="viewStart"
+                            android:src="@drawable/whatsapp"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"/>
+
+                    </RelativeLayout>
+
+                    <com.gharbia.medical.MyTextViewCairo
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:text="@string/closed"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/images_lay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:id="@+id/facebook"
+                                android:scaleType="fitXY"
+                                android:onClick="@{()->verificationVM.faceBook()}"
+                                android:src="@drawable/facebook"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:src="@drawable/youtube"
+                                android:scaleType="fitXY"
+                                android:onClick="@{()->verificationVM.youTube()}"
+                                android:id="@+id/youtube"
+                                android:layout_marginStart="@dimen/_7sdp"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:scaleType="fitXY"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:src="@drawable/whatsapp"
+                                android:id="@+id/whatsapp"
+                                android:onClick="@{()->verificationVM.whatsapp()}"
+                                android:layout_marginStart="@dimen/_7sdp"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:scaleType="fitXY"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:src="@drawable/instagram"
+                                android:onClick="@{()->verificationVM.instagram()}"
+                                android:id="@+id/instgram"
+                                android:layout_marginStart="@dimen/_7sdp"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:scaleType="fitXY"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:src="@drawable/global"
+                                android:onClick="@{()->verificationVM.webSite()}"
+                                android:id="@+id/website"
+                                android:layout_marginStart="@dimen/_7sdp"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_15sdp">
+
+                            <com.gharbia.medical.MyTextViewCairo
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="viewStart"
+                                android:id="@+id/price"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold"
+                                />
+
+                            <com.gharbia.medical.MyTextViewCairo
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="viewStart"
+                                android:text="@string/egp"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:id="@+id/images_recycler"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:visibility="@{verificationVM.isReviews? View.GONE : View.VISIBLE}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/branches_lay"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_15sdp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/adresses_rec"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/arrow_prevoius"
+                                android:id="@+id/previous"
+                                android:layout_gravity="center_vertical"/>
+
+                            <FrameLayout
+                                android:id="@+id/pp"
+                                android:layout_width="@dimen/_200sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/_30sdp"
+                                android:layout_marginEnd="@dimen/_30sdp">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="@dimen/_200sdp"
+                                    android:layout_height="@dimen/_70sdp"
+                                    android:id="@+id/days_rec"
+                                    android:visibility="gone"
+                                    android:overScrollMode="never"/>
+
+                                <RelativeLayout
+                                    android:orientation="horizontal"
+                                    android:id="@+id/spinner_lin_region2"
+                                    android:layout_marginEnd="@dimen/_20sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/rounded_white"
+                                    android:layout_width="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_height="match_parent">
+                                    <Spinner
+                                        android:dropDownWidth="match_parent"
+                                        android:overlapAnchor="false"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/region_spinner2"
+                                        android:hint="@string/city"
+                                        android:layout_centerInParent="true"
+                                        android:paddingStart="8dp"
+                                        android:paddingEnd="8dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center_vertical"
+                                        android:background="@drawable/rounded_white"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="36dp"
+                                        tools:ignore="RtlCompat" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:id="@+id/spinner_arrow_region2"
+                                        android:rotation="270"
+                                        android:visibility="gone"
+                                        android:layout_marginEnd="20dp"
+                                        android:backgroundTint="@color/blue"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@drawable/arrow_left_only"
+                                        android:layout_width="@dimen/_10sdp"
+                                        android:layout_height="@dimen/_10sdp" />
+                                </RelativeLayout>
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_200sdp"
+                                    android:layout_height="@dimen/_70sdp"
+                                    />
+                            </FrameLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow_next"
+                                android:id="@+id/next"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"/>
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/times_rec"
+                            android:clickable="false"
+                            android:scrollbars="none"
+                            android:nestedScrollingEnabled="false"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/shape_border"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/review_lay"
+                        android:visibility="@{verificationVM.isReviews? View.VISIBLE : View.GONE}"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        >
+
+                        <com.gharbia.medical.MyTextViewCairo
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="viewStart"
+                            android:text="@string/reviews"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/reviews_recycler"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.gharbia.medical.MyTextViewCairo
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:text="@string/patient_details"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linear_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/shape_border"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/user_name"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:id="@+id/username_img"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textAlignment="viewStart"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@android:color/transparent"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:id="@+id/username_text"
+                            android:textSize="@dimen/_12sdp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:hint="@string/patient_name"
+                            tools:ignore="RtlSymmetry" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linear_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/shape_border"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/phone"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:id="@+id/phone_img"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textAlignment="viewStart"
+                            android:inputType="phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@android:color/transparent"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:id="@+id/phone_txt"
+                            android:textSize="@dimen/_12sdp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:hint="@string/phone_number"
+                            tools:ignore="RtlSymmetry" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textAlignment="viewStart"
+                            android:inputType="phone"
+                            android:id="@+id/age"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_border"
+                            android:layout_height="@dimen/_40sdp"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:hint="@string/age"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            tools:ignore="RtlSymmetry" />
+
+                        <RelativeLayout
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="horizontal"
+                            android:id="@+id/spinner_lin_region"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/shape_border"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_centerVertical="true"
+                            android:layout_height="match_parent">
+                            <Spinner
+                                android:dropDownWidth="match_parent"
+                                android:overlapAnchor="false"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/region_spinner"
+                                android:hint="@string/city"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:textAlignment="viewStart"
+                                android:gravity="start|center_vertical"
+                                android:background="@drawable/shape_border"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/spinner_arrow_region"
+                                android:rotation="270"
+                                android:layout_marginEnd="20dp"
+                                android:backgroundTint="@color/blue"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/arrow_left_only"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linear_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:background="@drawable/shape_border"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textAlignment="viewStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:id="@+id/note_txt"
+                            android:textSize="@dimen/_12sdp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:hint="@string/note"
+                            tools:ignore="RtlSymmetry" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.gharbia.medical.MyTextViewCairo
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/rounded_blue"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/book"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:onClick="@{()->verificationVM.book()}"
+                        android:id="@+id/book"
+                        android:layout_marginBottom="@dimen/_20sdp"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/appointments"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@{verificationVM.isReviews? @color/blue : @color/text_color}"
+                    android:onClick="@{()->verificationVM.showReviews(1)}"
+                    />
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/reviews"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:onClick="@{()->verificationVM.showReviews(2)}"
+                    android:background="@{verificationVM.isReviews? @color/text_color : @color/blue}"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

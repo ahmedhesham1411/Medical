@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@drawable/rounded_grey"
+        android:layout_margin="@dimen/_10sdp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_colored"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@mipmap/ic_launcher11"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/circle_colored"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/noti_title"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="@dimen/_12sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                tools:ignore="RtlCompat" />
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:id="@+id/noti_desc"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/hint"
+                tools:ignore="RtlCompat" />
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/content"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textSize="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/hint"
+                tools:ignore="RtlCompat" />
+
+            <com.eugeneek.smilebar.SmileBar
+                android:id="@+id/starBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:enabled="false"
+                app:rating="3"
+                app:smileHeight="18dp"
+                app:smileWidth="18dp"
+                app:smileDefault="@drawable/ic_star_border_grey"
+                app:smileRate1="@drawable/ic_star_orange"
+                app:smileRate2="@drawable/ic_star_orange"
+                app:smileRate3="@drawable/ic_star_orange"
+                app:smileRate4="@drawable/ic_star_orange"
+                app:smileRate5="@drawable/ic_star_orange"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</layout>

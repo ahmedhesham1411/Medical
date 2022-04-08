@@ -1,0 +1,144 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">دليل الغربية الطبى</string>
+    <string name="notification_channel_id">CH_ID</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="lets_go" tools:ignore="StringEscaping">Lets Go</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="sign_up">تسجيل حساب</string>
+    <string name="terms">بالمتابعة ، فإنك توافق على الشروط والأحكام</string>
+    <string name="log_in_to_continue">للاستمرار سجل الدخول</string>
+    <string name="welcome">اهلا</string>
+    <string name="phone_number">رقم الموبايل</string>
+    <string name="password">الرقم السرى</string>
+    <string name="forget_your_password">نسيت كلمة المرور ؟</string>
+    <string name="log_in">تسجيل الدخول</string>
+    <string name="age">العمر</string>
+    <string name="don_t_have_an_account">ليس لديك حساب ؟</string>
+    <string name="underline"><u>تسجيل حساب</u></string>
+    <string name="underline2"><u>تسجيل الدخول</u></string>
+    <string name="create_an_account">انشاء حساب</string>
+    <string name="already_have_an_account">لديك حساب ؟</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="patient_name">اسم المريض</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="please_enter_the_code_the_code_has_been_sent_to_your_phone">الرجاء إدخال الرمز ، لقد تم إرسال الرمز إلى هاتفك</string>
+    <string name="resend_the_code">اعادة ارسال الرمز</string>
+    <string name="confirm">تأكيد</string>
+    <string name="back">رجوع</string>
+    <string name="forget_your_password2">نسيت كلمة المرور</string>
+    <string name="provide_your_account">ادخل هاتف حسابك الذي تريد إعادة تعيين كلمة المرور الخاصة به</string>
+    <string name="your_new_password">اسم المستخدم الجديد</string>
+    <string name="your_identity_has_been_verified_set_your_new_password">تم التحقق من هويتك ، قم بتعيين كلمة المرور الجديدة الخاصة بك</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="home">الرئيسية</string>
+    <string name="questions">أسئلة</string>
+    <string name="account">الحساب</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appointments">مواعيد</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="complaints">الشكاوى</string>
+    <string name="terms_and_conditions">الشروط و الاحكام</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="reminders">تذكير</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="setting">الاعدادات</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="change">تغيير</string>
+    <string name="english">الانجليزية</string>
+    <string name="arabic">العربية</string>
+    <string name="lang">الانجليزية</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="location">الموقع</string>
+    <string name="edit">تعديل</string>
+    <string name="edit_profile">تعديل الملف الشخصى</string>
+    <string name="save">حفظ</string>
+    <string name="current_appointments">المواعيد الحالية</string>
+    <string name="previous_appointments">المواعيد السابقة</string>
+    <string name="doctor">Doctor</string>
+    <string name="egp">جنيه</string>
+    <string name="complaint_and_suggestion">الشكاوى و الاقتراحات</string>
+    <string name="send">ارسال</string>
+    <string name="your_message">رسالتك</string>
+    <string name="lorem2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.</string>
+    <string name="are_you_sure_you_want_to_logout">هل أنت متأكد أنك تريد تسجيل الخروج</string>
+    <string name="text_logout">سيؤدي تسجيل الخروج إلى إخفاء جميع بياناتك الشخصية مؤقتًا ، بما في ذلك الحجوزات. لرؤية هذه الإعلانات ، ما عليك سوى تسجيل الدخول مرة أخرى إلى حسابك.</string>
+    <string name="no">لا</string>
+    <string name="yes">نعم</string>
+    <string name="change_your_password">تغيير كلمة المرور</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="city">المدينة</string>
+    <string name="clinics">عيادات</string>
+    <string name="medical_centers">مراكز طبية</string>
+    <string name="hospital">مستشفيات</string>
+    <string name="analysis_laboratories">معامل التحاليل</string>
+    <string name="x_rays">مراكز الآشعة</string>
+    <string name="doctors">أطباء</string>
+    <string name="pharmacies">صيدليات</string>
+    <string name="dental">Dental</string>
+    <string name="heart">Heart</string>
+    <string name="brain">Brain</string>
+    <string name="bone">Bone</string>
+    <string name="sort">SORT</string>
+    <string name="book">حجز</string>
+    <string name="sponsored">برعاية</string>
+    <string name="name">الاسم</string>
+    <string name="sort_by">تصنيف</string>
+    <string name="low_to_high">من الأقل إلى الأعلى</string>
+    <string name="high_to_low">من الأعلى إلى الأقل</string>
+    <string name="medical_degree">شهادة طبية</string>
+    <string name="personal_info">معلومات شخصية</string>
+    <string name="reviews">المراجعات</string>
+    <string name="appointment_confirmed">تم تأكيد الموعد!</string>
+    <string name="add_to_calendar">إضافة إلى التقويم</string>
+    <string name="error">خطأ</string>
+    <string name="okay">تم</string>
+    <string name="allrequired">جميع الحقول مطلوبة</string>
+    <string name="time_booked">هذا الوقت محجوز</string>
+    <string name="choose_time">اختروقت</string>
+    <string name="weakpass">كلمة مرور ضعيفة</string>
+    <string name="password_match">كلمات المرور غير متطابقة</string>
+    <string name="incorrectphone">هاتف غير صحيح</string>
+    <string name="no_internet">لا يوجد اتصال بالإنترنت!</string>
+    <string name="required_photo">الصورة مطلوبة</string>
+    <string name="success">تم 😍️</string>
+    <string name="failed">فشل ☹️</string>
+    <string name="waiting_for_location" tools:ignore="TypographyEllipsis">في انتظار الموقع ...</string>
+    <string name="api_key" translatable="false">AIzaSyCoV4yvSpXtvzrzdf8yPkGVVwt8qhA-DJM</string>
+    <string name="dewan">ديوان</string>
+    <string name="dewan_channel">قناة ديوان</string>
+    <string name="no_data">لا يوجد بيانات</string>
+    <string name="your_loc">موقعك</string>
+    <string name="note">ملحوظة</string>
+    <string name="patient_details">تفاصيل المريض</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="gharbia_medical_guide">قناة ديوان الطبية</string>
+    <string name="press_again">اضغط رجوع مرة اخرى للخروج</string>
+    <string name="rate">تقييم</string>
+    <string name="use_your_current_location">استخدم موقعك الحالى</string>
+    <string name="done">تم</string>
+    <string name="price">السعر :</string>
+    <string name="review2">تقييم</string>
+    <string name="feedback">مراجعات</string>
+    <string name="cancel_order">الغاء الطلب</string>
+    <string name="closed">مغلق</string>
+    <string name="search">بحث</string>
+    <string name="rating">تقييم</string>
+    <string name="department">القسم</string>
+    <string name="degree">درجة الماجستير</string>
+    <string name="name_required">الاسم مطلوب</string>
+    <string name="date">يوم :</string>
+    <string name="advisor">استشاري</string>
+    <string name="specialist">اخصائي</string>
+    <string name="phd">دكتوراه</string>
+    <string name="master">ماجيستير</string>
+    <string name="assistantprofessor">مدرس مساعد</string>
+    <string name="professor">مدرس</string>
+    <string name="teacherassistant">استاذ مساعد</string>
+    <string name="teacher">استاذ</string>
+
+</resources>

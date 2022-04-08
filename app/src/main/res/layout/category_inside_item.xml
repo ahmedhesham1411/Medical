@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/shape_border"
+        android:layout_marginEnd="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/placeholder2"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+        <com.gharbia.medical.MyTextViewCairo
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/text"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

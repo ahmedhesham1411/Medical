@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_marker_view"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/title_lin"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_height="wrap_content">
+        <com.gharbia.medical.MyTextViewCairo
+            android:id="@+id/title_txt"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.gharbia.medical.MyTextViewCairo
+            android:visibility="gone"
+            android:id="@+id/distance_by_km"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:text="155 km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/icon_img2"
+        android:layout_gravity="center"
+        android:layout_width="32dp"
+        android:layout_height="35dp" />
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/frame_car"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_width="35dp"
+        android:layout_height="35dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon_img"
+            android:background="@drawable/placeholder"
+            android:layout_gravity="center"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

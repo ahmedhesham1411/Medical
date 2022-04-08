@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.IntroActivity">
+
+        <FrameLayout
+            android:id="@+id/frame_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_100sdp">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:scrollbars="none"
+                android:clickable="false"
+                android:saveEnabled="false"
+                android:id="@+id/imageSliderHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderCircularHandlerEnabled="false"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorSelectedColor="@color/white"
+                app:sliderIndicatorUnselectedColor="@color/white"
+                app:sliderScrollTimeInSec="3"
+                app:sliderStartAutoCycle="false"
+                />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/line1"
+            android:visibility="gone"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_centerHorizontal="true">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/next"
+                android:id="@+id/next1"
+                android:background="@drawable/rounded_blue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/line2"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/line2_previous"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/previous"
+                android:background="@drawable/rounded_blue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"/>
+
+            <Space
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"/>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/line2_next"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/next"
+                android:background="@drawable/rounded_blue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/line3"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp">
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/line3_previous"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/previous"
+                android:background="@drawable/rounded_blue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"/>
+
+            <Space
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"/>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:id="@+id/line3_next"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/lets_go"
+                android:background="@drawable/rounded_blue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</layout>

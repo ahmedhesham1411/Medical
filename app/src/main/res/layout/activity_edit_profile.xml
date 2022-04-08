@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="verificationVM"
+            type="com.gharbia.medical.viewModel.EditProfileViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.RegisterActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal"
+            android:background="@color/blue">
+
+            <FrameLayout
+                android:onClick="@{()->verificationVM.back()}"
+                android:id="@+id/back_frame"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                tools:ignore="ObsoleteLayoutParam,UselessParent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24_white" />
+
+            </FrameLayout>
+
+            <com.gharbia.medical.MyTextViewCairo
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_60sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:id="@+id/profileimg">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:id="@+id/profile_imageeee"
+                        android:layout_gravity="center"/>
+
+                    <FrameLayout
+                        android:onClick="@{()->verificationVM.openImage()}"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_70sdp"
+                        android:layout_marginLeft="@dimen/_60sdp"
+                        android:id="@+id/choose_img">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:src="@drawable/camera_icon"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/shape_border"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/user_name"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:id="@+id/username_img"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:textAlignment="viewStart"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:id="@+id/username_text"
+                        android:textSize="@dimen/_12sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/user_name"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/shape_border"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:id="@+id/email_img"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:textAlignment="viewStart"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:id="@+id/email_txt"
+                        android:textSize="@dimen/_12sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/email"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/shape_border"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/phone"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:id="@+id/phone_img"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:textAlignment="viewStart"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@android:color/transparent"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:id="@+id/phone_txt"
+                        android:textSize="@dimen/_12sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="@string/phone_number"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:onClick="@{()->verificationVM.Validate()}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="@string/save"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_blue_3"
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:id="@+id/sign_up"/>
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:onClick="@{()->verificationVM.back()}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="@string/back"
+                    android:textColor="@color/hint"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

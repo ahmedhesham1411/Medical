@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "219974859315",
+    "project_id": "medical-66dbd",
+    "storage_bucket": "medical-66dbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219974859315:android:a609b507ddfc14e6d00146",
+        "android_client_info": {
+          "package_name": "com.gharbia.medical"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219974859315-af6g2kri9962pgnoiropgm4u24m6pqv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARhA-VEZUkpK03ip4NklVktocvJ9H3gcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219974859315-af6g2kri9962pgnoiropgm4u24m6pqv7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

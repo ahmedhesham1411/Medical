@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="anim_duration_short_2">100</integer>
+    <integer name="anim_duration_short">400</integer>
+    <integer name="anim_duration_medium">800</integer>
+    <integer name="anim_duration_long">1200</integer>
+    <integer name="anim_duration_long2">1500</integer>
+
+    <integer name="btnplusview">1</integer>
+    <integer name="btnpluspos">2</integer>
+</resources>

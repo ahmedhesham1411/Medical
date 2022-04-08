@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:background="@drawable/rounded_white"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:id="@+id/img"
+                android:src="@drawable/eewweeww"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp">
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gharbia_medical_guide"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"/>
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textStyle="normal"
+                    android:id="@+id/created_at"/>
+
+                <com.gharbia.medical.MyTextViewCairo
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAlignment="viewStart"
+                    android:id="@+id/title"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            card_view:cardCornerRadius="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:showFullScreenButton="false"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.gharbia.medical.MyTextViewCairo
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/disc"
+            android:textColor="@color/hint"
+            android:textStyle="bold"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

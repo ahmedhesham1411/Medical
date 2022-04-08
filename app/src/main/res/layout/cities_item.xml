@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45sdp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flag"
+            android:src="@drawable/ic_baseline_emoji_flags_24"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+        <com.gharbia.medical.MyTextViewCairo
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/city"
+            android:gravity="center_vertical"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            tools:ignore="RtlCompat"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/hint"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
